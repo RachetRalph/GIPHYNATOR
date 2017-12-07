@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIPHYINATOR</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">GIPHYINATOR</h1>
+
+        <!-- Rendered Buttons will get Dumped Here  -->
+        <div id="gif-View"></div>
+    
+    
+        <!-- This form will be where users input GIPHY search request -->
+        <form id="giphy-form">
+            <h4 id="header">FIND IT IN A GIPHY</h4>
+          <input type="text" id="giphy-input"><br>
+            
+          <!-- This button will trigger our AJAX call -->
+          <input id="add-giphy" type="submit" value="GIF IT UP TO ME">
+        </form>
+
+        <div id="content">
+            <div id="gif-here">
+            </div>
+        </div>  
+        <!-- Begin Js & Jquery Script -->
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+        
+</body>
+</html>

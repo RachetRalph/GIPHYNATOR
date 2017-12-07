@@ -1,0 +1,14 @@
+button,
+form,
+input {
+  margin: 10px;
+}
+#header{
+    text-align: center;
+}
+#giphy-form{
+    text-align: center;
+}
+#gif-view{
+    text-align: center;
+}
