@@ -1,14 +1,54 @@
-button,
+ @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anton');button,
 form,
 input {
   margin: 10px;
 }
-#header{
-    text-align: center;
+#header {
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Anton', sans-serif;
+  color: azure;
 }
-#giphy-form{
-    text-align: center;
+#subHead {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Amatic SC', cursive;
+  color: azure;
 }
-#gif-view{
-    text-align: center;
+
+#giphy-input{
+    width: 60%;
+    height: 40PX;
+}
+#giphy-form {
+  text-align: center;
+  margin-top: 150px;
+   margin-bottom: 80px;
+}
+.container {
+  margin-top: 25px;
+  margin: 0 auto;
+  width: 98%;
+  height: 100%;
+  background: #5c258d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #4389a2,
+    #5c258d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #4389a2,
+    #5c258d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button {
+  display: inline-block;
+  height: 50px;
+  width: 8%;
+}
+#add-giphy {
+  height: 50px;
+  width: 100px;
 }

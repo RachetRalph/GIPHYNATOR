@@ -1,7 +1,5 @@
 // Initial array of GIF topics //
-var topics = ["Transformers","Batman","Pranks"," Babies","Office",
-" Funny"," Viral","Riddles","Gym fail","Beer","Tailgate","ASU",
-"Big Bang Theory","Twerk","Spice Girls",];
+const topics = ["Kanye","South Park","Batman","Pranks"," Babies","Office", "Funny"," Viral","Riddles","Gym fail","Beer","Tailgate","ASU","Twerk","Spice Girls","Pool Party","420","Trump","Vice","Infinity War","Chappell"];
 
 // Function for displaying giphy topics in array 
 function renderButtons() {
@@ -10,8 +8,8 @@ function renderButtons() {
 
     // Looping through the array of topics
     for (var i = 0; i < topics.length; i++) {
-    // Then dynamicaly generating buttons for each movie in the array
-    var b = $("<button>");
+    // Then dynamicaly generating buttons for each topic in the array
+    let b = $("<button>");
     b.addClass("giffy");
     b.attr("data-name", topics[i]);
     b.text(topics[i]);
@@ -27,22 +25,26 @@ $("#add-giphy").on("click", function(event) {
     event.preventDefault(); 
 
     // Here we grab the text from the input box
-    var giphy = $("#giphy-input").val().trim();
+     giphy = $("#giphy-input").val().trim();
 
     topics.push(giphy);
     $("#add-giphy").val();
 
     // Redraw the buttons
     renderButtons();
+    $("#giphy-input").val(" ");
+
 });
+
+
 // The fetchGifs will call upon the GIPHY API
 function fetchGifs() {
 // Topic names are extracted from button text
-var topic = $(this).attr("data-name");
+let topic = $(this).attr("data-name");
 
 // Here we construct our URL
-var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Gc1pdRi3ysJDHOLet2956agNdAFsEOgX&q="+ 
-topic +"&limit=10&offset=10&rating=PG-13&lang=en";
+let queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Gc1pdRi3ysJDHOLet2956agNdAFsEOgX&q="+ 
+topic +"&limit=20&offset=40&rating=PG-13&lang=en";
 
 // AJAX call to GIPHY API
 $.ajax({
@@ -92,14 +94,18 @@ function animateGif(){
     }
 }
 
-// Render the initial animal buttons when the HTML has finished loading
+function scroll(){
+    let element = document.getElementById("content");
+    element.scrollIntoView();
+}
+// Render the initial buttons when the HTML has finished loading
 $(document).ready(function() {
-    renderButtons();
+    renderButtons().onClick()
   });
   
 // An event handler for the topic buttons to fetch appropriate Gifs
-
 $(document).on("click", ".giffy", fetchGifs);
-
+$(document).on("click", ".giffy", scroll);
 // Add an event handler for the Gifs to animate and stop
 $(document).on("click", ".topicGif", animateGif);
+
