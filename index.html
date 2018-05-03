@@ -10,26 +10,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <h1 id="header">GIPHYINATOR</h1>
 
         <!-- Rendered Buttons will get Dumped Here  -->
-        <div class id="gif-View"></div>
+        <div class="row" id="gif-View"></div>
     
     
         <!-- This form will be where users input GIPHY search request -->
-        <form id="giphy-form">
+        
+        <div class="row" id="giphy-form">
+        <form >
             <h4 id="subHead">Add a giphy</h4>
           <input type="text" id="giphy-input"><br>
             
           <!-- This button will trigger our AJAX call -->
           <input id="add-giphy" type="submit" value="GIF IT UP">
         </form>
+        </div>
 
-        <div id="content">
-            <div id="gif-here">
-            </div>
-        </div>  
+        <div id="gif-here"></div>  
         <!-- Begin Js & Jquery Script -->
         <script type="text/javascript" src="assets/javascript/app.js"></script>
         
