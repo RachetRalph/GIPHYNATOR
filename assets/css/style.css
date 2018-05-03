@@ -27,10 +27,10 @@ input {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-.container-fluid {
+.container {
   /* margin-top: 25px; */
   margin: 0 auto;
-  /* width: 98%; */
+  width: 100%;
   max-height: 100%;
   background: #5c258d; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -47,12 +47,12 @@ input {
 
 button {
   word-break: break-word;
-  display: inline-block;
+  /* display: inline-block; */
   height: 50px;
   max-width: 50%;
 }
 #gif-here {
-float: left;
+margin: 0 auto;
 }
 
 .clearfix {
