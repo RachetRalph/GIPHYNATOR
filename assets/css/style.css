@@ -1,13 +1,15 @@
  @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anton');button,
-form,
+
+ form,
 input {
   margin: 10px;
 }
 #header {
   text-align: center;
-  font-size: 70px;
+  font-size: 100px;
   font-family: 'Anton', sans-serif;
   color: azure;
+  padding-bottom: 100px;
 }
 #subHead {
   text-align: center;
@@ -22,14 +24,14 @@ input {
 }
 #giphy-form {
   text-align: center;
-  margin-top: 150px;
-   margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
-.container {
-  margin-top: 25px;
+.container-fluid {
+  /* margin-top: 25px; */
   margin: 0 auto;
-  width: 98%;
-  height: 100%;
+  /* width: 98%; */
+  max-height: 100%;
   background: #5c258d; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -44,11 +46,15 @@ input {
 }
 
 button {
+  word-break: break-word;
   display: inline-block;
   height: 50px;
-  width: 8%;
+  max-width: 50%;
 }
-#add-giphy {
-  height: 50px;
-  width: 100px;
+#gif-here {
+float: left;
+}
+
+.clearfix {
+    overflow: auto;
 }
