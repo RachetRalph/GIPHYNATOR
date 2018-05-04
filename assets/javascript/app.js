@@ -90,7 +90,7 @@ function fetchGifs() {
       $("#gif-here").empty();
       for (var i = 0; i < results.length; i++) {
         var gifDiv = $("<div>");
-        gifDiv.addClass("row");
+        gifDiv.addClass("col-md-4");
 
         var gifImg = $("<img>");
         gifImg.attr("src", results[i].images.fixed_height_still.url);
@@ -157,4 +157,4 @@ function scroll() {
 $(document).on("click", ".btn", scroll);
 
 // Add an event handler for the Gifs to animate and stop
-$(document).on("click", ".row", animateGif);
+$(document).on("click", ".col-md-4", animateGif);

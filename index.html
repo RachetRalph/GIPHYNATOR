@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <h1 id="header">GIPHYINATOR</h1>
 
         <!-- Rendered Buttons will get Dumped Here  -->
@@ -23,13 +23,13 @@
         <form >
             <h4 id="subHead">Add a giphy</h4>
           <input type="text" id="giphy-input"><br>
-            
           <!-- This button will trigger our AJAX call -->
-          <input id="add-giphy" type="submit" value="GIF IT UP">
+          <button id="add-giphy" type="submit">GIF IT UP </button>
         </form>
         </div>
 
-        <div id="gif-here"></div>  
+        <div class="row" id="gif-here"> </div>  
+       
         <!-- Begin Js & Jquery Script -->
         <script type="text/javascript" src="assets/javascript/app.js"></script>
         
